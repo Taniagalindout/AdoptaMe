@@ -1,14 +1,8 @@
 package mx.edu.utez.AdoptaMe.service;
 
-import mx.edu.utez.AdoptaMe.entity.UserAdoptame;
-import mx.edu.utez.AdoptaMe.model.request.user.UserInsertDto;
-
-import java.util.Optional;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
 public interface UserAdoptameService {
-    boolean saveUser(UserInsertDto user);
-
-    Optional<UserAdoptame> findUserById(Long id);
-
-    UserAdoptame findUserByUsername(String username);
+    UserDetails loadUserByUsername(String username) throws UsernameNotFoundException;
 }
