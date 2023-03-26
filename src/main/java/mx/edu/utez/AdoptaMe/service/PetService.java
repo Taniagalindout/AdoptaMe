@@ -9,7 +9,7 @@ public interface PetService {
 
     Pet getPetById(Long id);
 
-    void savePet(Pet pet);
+    Pet savePet(Pet pet);
 
     void updatePet(Long id, Pet updatedPet);
 

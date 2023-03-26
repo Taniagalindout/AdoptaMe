@@ -1,7 +1,6 @@
 package mx.edu.utez.AdoptaMe.service;
 import mx.edu.utez.AdoptaMe.entity.Pet;
 import mx.edu.utez.AdoptaMe.repository.PetRepository;
-import mx.edu.utez.AdoptaMe.service.PetService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,8 +22,9 @@ public class PetServiceImp implements PetService{
     }
 
     @Override
-    public void savePet(Pet pet) {
+    public Pet savePet(Pet pet) {
         petRepository.save(pet);
+        return pet;
     }
 
     @Override
